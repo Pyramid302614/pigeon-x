@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 
 public class Controls {
 
-    public static final String model = "4.2";
+    public static final String model = "5";
 
     public static boolean errorLoggerOn = true;
     private static boolean controlsLoggerOn = false;
@@ -165,7 +165,8 @@ public class Controls {
                      }
                  }
              }
-             if(controllers.isEmpty() || control.controllers.length == 0) resolved = false; // If no controllers
+             // DIFF
+             if(controllers.isEmpty() || (!control.allControllers && control.controllers.length == 0)) resolved = false; // If no controllers
              control.conditionTrue = resolved;
             if(controlsLoggerOn && (control.conditionWasTrue != control.conditionTrue))
                 Log.log("[ControlsManager:ControlsLogger] Control \"" + control.name + "\" new state detected: " + control.conditionTrue);

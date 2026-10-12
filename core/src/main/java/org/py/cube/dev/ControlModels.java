@@ -25,6 +25,10 @@ public class ControlModels {
         Controls.addControl("test", Controls.BinaryComponents.A)
             .bindFunction(e -> System.out.println(1),true,false);
 
+        Controls.addControl("move",Controls.JoystickComponents.A," TODOnew int[] {0})
+            .bindFunction(e -> {
+                Controls.getJoystickAngle(Controls.JoystickComponents.A,0);
+            );
 
     }
 

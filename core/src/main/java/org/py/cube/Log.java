@@ -1,7 +1,6 @@
 package org.py.cube;
 
 import org.py.cmm5.Main;
-import org.py.cmm5.Polyware;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,8 +11,8 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class Log {
@@ -120,6 +119,7 @@ public class Log {
         });
         commands.put("termalink",args -> {
             if(args.length == 0) return "termalink <get/set> <name> <set:value>";
+            if(args[0].equals("list")) return Arrays.toString(Termalink.list());
             if(!Termalink.exists(args[1])) return "Unknown name: " + args[1];
             switch(args[0]) {
                 case "get":

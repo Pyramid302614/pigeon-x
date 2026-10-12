@@ -35,7 +35,7 @@ public class Graphics2D {
 
 
 
-    public static Color fillColor = Color.RED;
+    public static Color fillColor = Color.ORANGE;
     public static Color strokeColor = Color.BLACK;
 
     public static BitmapFont font = new BitmapFont(); // Uses default

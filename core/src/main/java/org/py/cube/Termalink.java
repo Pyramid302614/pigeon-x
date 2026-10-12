@@ -37,6 +37,9 @@ public class Termalink {
         return get.get();
 
     }
+    public static String[] list() {
+        return links.keySet().toArray(new String[0]);
+    }
     public void set(String v) {
 
         set.accept(v);
